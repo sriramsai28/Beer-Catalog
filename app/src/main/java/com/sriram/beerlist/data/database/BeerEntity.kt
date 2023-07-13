@@ -8,7 +8,7 @@ data class BeerEntity(
     @PrimaryKey
     val id: Int,
     val name: String,
-    val tagLine: String,
+    val tagLine: String?,
     val description: String,
     val firstBrewed: String,
     val imageUrl: String?

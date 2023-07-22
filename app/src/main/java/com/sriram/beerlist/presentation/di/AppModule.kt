@@ -9,7 +9,7 @@ import com.sriram.beerlist.data.database.BeerDataBase
 import com.sriram.beerlist.data.database.BeerEntity
 import com.sriram.beerlist.data.remote.API
 import com.sriram.beerlist.data.remote.BASE_URL
-import com.sriram.beerlist.data.remote.BeerRemoteMediator
+import com.sriram.beerlist.data.repository.BeerRemoteMediator
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

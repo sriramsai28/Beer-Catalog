@@ -1,4 +1,4 @@
-package com.sriram.beerlist.data.remote
+package com.sriram.beerlist.data.repository
 
 import androidx.paging.ExperimentalPagingApi
 import androidx.paging.LoadType
@@ -7,8 +7,8 @@ import androidx.paging.RemoteMediator
 import androidx.room.withTransaction
 import com.sriram.beerlist.data.database.BeerDataBase
 import com.sriram.beerlist.data.database.BeerEntity
+import com.sriram.beerlist.data.remote.API
 import com.sriram.beerlist.mapper.toBeerEntity
-import kotlinx.coroutines.delay
 import retrofit2.HttpException
 import java.io.IOException
 
@@ -36,7 +36,6 @@ class BeerRemoteMediator(
                     }
                 }
             }
-            delay(2000L)
             val beers = beerAPI.getBeers(
                 page = loadKey,
                 pageCount = state.config.pageSize
